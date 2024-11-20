@@ -1,7 +1,6 @@
 const namaElement = document.querySelector("#name")
 const ageElement = document.querySelector("#age")
 const heightElement = document.querySelector("#age")
-
 const submitButton = document.querySelector("#submit-button")
 
 function submit () {
@@ -42,9 +41,27 @@ function operators () {
     //} else if (age > 18) {
     //} else if (navn === "Christina" && age > 18){
     //} else if ( Name === "Christina" || age >18 ){
-    //}
+    //} 
 }
 
 
-submitButton.addEventListener("click", operators)
+function attack () {
+    const randomNumber = Math.floor(Math.random() * 3) +1
+
+    const damage = randomNumber * 2
+
+    if (randomNumber > 2 ) {
+        console.log( "du gjorde " + randomNumber + "skade" )
+    } else if (randomNumber === 2) {
+        console.log("du gjorde " + randomNumber + "skade")
+    } else {
+        console.log("du gjorde " + randomNumber + "skade")
+    }
+    
+    console.log(randomNumber)
+
+}
+
+
+submitButton.addEventListener("click", attack)
 
